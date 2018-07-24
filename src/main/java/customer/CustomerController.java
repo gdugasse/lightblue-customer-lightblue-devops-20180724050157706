@@ -38,6 +38,7 @@ import com.cloudant.client.org.lightcouch.NoDocumentException;
 public class CustomerController {
     
     private static Logger logger =  LoggerFactory.getLogger(CustomerController.class);
+    
     private Database cloudant;
     
     @Autowired
@@ -59,9 +60,10 @@ public class CustomerController {
             logger.error(e.getMessage(), e);
             throw e;
         }
-    }
+}
+
     
-    private Database cloudant  {
+    private Database Cloudant {
         return cloudant;
     }
 
