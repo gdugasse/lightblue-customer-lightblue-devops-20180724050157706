@@ -45,27 +45,26 @@ public class CustomerController {
     private CloudantPropertiesBean cloudantProperties;
     
     @PostConstruct
-    private void init() throws MalformedURLException {
-        logger.debug(cloudantProperties.toString());
-        
+    private void init() throws MalformedURLException 
+    {
+    	
+        logger.debug(cloudantProperties.toString());      
         try {
             String cldUrl = cloudantProperties.getProtocol() + "://" + cloudantProperties.getHost() + ":" + cloudantProperties.getPort();
             logger.info("Connecting to cloudant at: " + cldUrl);
-            final CloudantClient cloudantClient = ClientBuilder.url(new URL(cldUrl))
-                    .username(cloudantProperties.getUsername())
-                    .password(cloudantProperties.getPassword())
-                    .build();
+            final CloudantClient cloudantClient = ClientBuilder.url(new URL(cldUrl)).username(cloudantProperties.getUsername()).password(cloudantProperties.getPassword()).build();
             cloudant = cloudantClient.database(cloudantProperties.getDatabase(), true);
         } catch (MalformedURLException e) {
             logger.error(e.getMessage(), e);
             throw e;
         }
-}
-
-    
-    private Database Cloudant {
-        return cloudant;
     }
+    
+    /***
+    private Database cloudant
+    {
+        return cloudant;
+    }***/
 
     /**
      * @return customer by username
