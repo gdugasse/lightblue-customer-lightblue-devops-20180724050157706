@@ -61,7 +61,7 @@ public class CustomerController {
     }
     
     
-    private Database cloudant
+    public Database Cloudant
     {
         return this.cloudant;
     }
