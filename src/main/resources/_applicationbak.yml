@@ -1,3 +1,4 @@
+
 server: 
        context-path: /micro
        port: 8080
