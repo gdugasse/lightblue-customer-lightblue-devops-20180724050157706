@@ -1,4 +1,4 @@
-server:
+server: 
        context-path: /micro
        port: 8080
 spring:
