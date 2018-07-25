@@ -60,11 +60,11 @@ public class CustomerController {
         }
     }
     
-    /***
+    
     private Database cloudant
     {
-        return cloudant;
-    }***/
+        return this.cloudant;
+    }
 
     /**
      * @return customer by username
