@@ -61,7 +61,7 @@ public class CustomerController {
     }
     
 
-    private Database cloudant()
+    private Database cloudant
     {
         return cloudant;
     }
